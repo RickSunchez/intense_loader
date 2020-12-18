@@ -1,0 +1,62 @@
+<style type="text/css">
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100vh;
+		padding: 0px;
+		margin: 0px;
+	}
+	.loader {
+		width: 200px;
+		height: 200px;
+		position: relative;
+		animation: loader 2s infinite ease-in-out;
+	}
+
+	.l1, .l2, .l3, .l4 {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		border: solid 15px black;
+		box-sizing: border-box;
+	}
+		.l1 {animation: to-left 2s infinite ease-in-out;}
+		.l2 {animation: to-top 2s infinite ease-in-out;}
+		.l3 {animation: to-right 2s infinite ease-in-out;}
+		.l4 {animation: to-bottom 2s infinite ease-in-out;}
+	@keyframes loader {
+		0%   {transform: rotate(0deg);}
+		100% {transform: rotate(90deg);}
+	}
+		@keyframes to-left {
+			0%   {left: 0px; border-color: black;}
+			50%  {left: -185px;}
+			100% {left: 0px; border-color: red;}
+		}
+		@keyframes to-top {
+			0%   {top: 0px; border-color: black;}
+			50%  {top: -185px;}
+			100% {top: 0px; border-color: lime;}
+		}
+		@keyframes to-right {
+			0%   {left: 0px; border-color: black;}
+			50%  {left: 185px;}
+			100% {left: 0px; border-color: cyan;}
+		}
+		@keyframes to-bottom {
+			0%   {top: 0px; border-color: black;}
+			50%  {top: 185px;}
+			100% {top: 0px; border-color: purple;}
+		}
+</style>
+
+<div class="loader">
+	<span class="l1"></span>
+	<span class="l2"></span>
+	<span class="l3"></span>
+	<span class="l4"></span>
+</div>
